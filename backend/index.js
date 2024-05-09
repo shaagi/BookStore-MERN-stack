@@ -10,6 +10,9 @@ const app = express();
 //middleware for parsing request body
 app.use(express.json());
 
+//middleware for handling cors policy
+app.use(cors()); // this allows all origins but seems in real project do it by setting which is allowed 
+
 app.get('/', (req, res) => {
     return res.status(234).send("Welcome to MERN Stack tutorial");
 });
